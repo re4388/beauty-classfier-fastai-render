@@ -1,0 +1,93 @@
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <link rel='stylesheet' href='../static/style.css'>
+    <script src='../static/client.js'></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div>
+
+        <!-- title div -->
+        <div class='center'>
+            <div class='title'>A Toy Project: beauty or not<br> upload the <strong>girl face</strong> 
+                picture and see!
+                </div>
+
+            <!-- main text div -->
+            <p>
+                Caveat: the data used for the model building only inculdes Taiwan Google Picture Search
+                <br>
+                
+            </p>
+
+
+
+
+
+            <!-- content div -->
+            <div class='content'>
+
+
+                <!-- file input div -->
+                <div class='no-display'>
+                    <input id='file-input' class='no-display' type='file' name='file' accept='image/*'
+                        onchange='showPicked(this)'>
+                </div>
+
+
+
+                <button class='choose-file-button' type='button' onclick='showPicker()'>
+                    Select Image
+                </button>
+
+                <!-- upload div -->
+                <div class='upload-label'>
+                    <label id='upload-label'>No file chosen</label>
+                </div>
+
+                <!-- image pick div -->
+                <div>
+                    <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
+                </div>
+
+                <!-- analyze div -->
+                <div class='analyze'>
+                    <button id='analyze-button' class='analyze-button' type='button'
+                        onclick='analyze()'>Analyze</button>
+                </div>
+
+                <!-- result div -->
+                <div  class='result-label'>
+                    <h1><label id='result-label'></label></h1>
+                    
+                </div >
+
+            <div class="alert alert-danger" role="alert">
+                <small>
+                    This project is just for fun! Author believe that it's childish to focus on girl's look. 
+                    </small>
+            </div>
+
+        </div class="blockquote-footer, display-4" >
+
+                <!-- Error rate: 7.69 % <br> -->
+                Precision: 97.06 % (True bueaty / predicted bueaty)<br>
+                Recall: 91.67 % (True bueaty / Actual bueaty)<br>
+                <!-- Type-I error/False Positive: 8.33 %<br>
+                Type=II error/False Negative: 16.67 % -->
+
+        <div>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
